@@ -13,7 +13,7 @@ def main():
     file_path = sys.argv[1]
 
     # Validate the file is a plain text file
-    validate_file_path(file_path)
+    validate_file(file_path)
 
     # Determine destination path using the file name
     dest_path = get_dest_path(file_path)
@@ -24,7 +24,7 @@ def main():
     print(f"SUCCESS! Created new file at {dest_path}")
 
 
-def validate_file_path(file_path: str) -> None:
+def validate_file(file_path: str) -> None:
     # Check if the file exists
     if not os.path.exists(file_path):
         print(f"The file '{file_path}' does not exist.")
